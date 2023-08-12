@@ -1,11 +1,11 @@
 <div class="flex items-center justify-center h-screen">
   <div class="w-full max-w-sm mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <%# Form %>
-      <%= render "devise/shared/error_messages", resource: resource %>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%# Error message %>
       <div class="space-y-5">
         <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
+        <%# Error message %>
+        <%= render "devise/shared/error_messages", resource: resource %>
         <%# Email %>
         <div>
           <%= f.label :email, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
