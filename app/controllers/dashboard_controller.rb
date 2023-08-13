@@ -1,4 +1,5 @@
 class DashboardController < ApplicationController
+
   def index
   end
 
@@ -7,4 +8,5 @@ class DashboardController < ApplicationController
 
   def settings
   end
+
 end
