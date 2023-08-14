@@ -86,6 +86,9 @@
                 </div>
               </div>
             </div>
+            <div class="flex">
+              <%#= link_to "Add new product", new_admin_product_path, class: "w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" %>
+            </div>
             <button id="createProductButton"
                     class="text-white bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
                     type="button" data-drawer-target="drawer-create-product-default"
@@ -96,7 +99,6 @@
           </div>
         </div>
       </div>
-
       <div class="flex flex-col">
         <div class="overflow-x-auto">
           <div class="inline-block min-w-full align-middle">
@@ -146,7 +148,7 @@
                     </div>
                     <%# Price %>
                     <div class="price">
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white"><%= product.price.to_i ? product.price.to_i : product.price  %>
+                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white"><%= product.price.to_i ? product.price.to_i : product.price %>
                         DA
                       </td>
                     </div>
@@ -190,10 +192,10 @@
       </div>
       <%# Add product drawer %>
       <%= render partial: 'new' %>
+
     </main>
   </div>
 </div>
-
 
 <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
 <script src="https://flowbite-admin-dashboard.vercel.app//app.bundle.js"></script>

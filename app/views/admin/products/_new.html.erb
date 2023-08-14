@@ -17,7 +17,7 @@
     <span class="sr-only">Close menu</span>
   </button>
   <%# form to create new product %>
-  <% form_with(model: [:admin, @product]) do |form| %>
+  <%= form_with(model: [:admin, @product]) do |form| %>
     <form>
       <div class="space-y-4">
         <%# name %>

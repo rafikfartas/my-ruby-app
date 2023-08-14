@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     passwords: 'user/devise/passwords',
   }
 
-  resources :tasks
+  namespace :user do
+    resources :tasks
+  end
 
 
 
@@ -24,4 +26,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "user/tasks#index"
+  get '/:locale' => 'user/tasks#index'
 end

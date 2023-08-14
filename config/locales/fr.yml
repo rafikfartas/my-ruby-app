@@ -1,0 +1,16 @@
+fr:
+  devise:
+    sign_in_to_our_platform: "Se connecter à notre plateforme"
+    email: "E-mail"
+    password: "Mot de passe"
+    remember_me: "Se souvenir de moi"
+    lost_password: "Mot de passe oublié?"
+    login: "Se connecter"
+    not_registered: "Pas de compte?"
+    create_account: "Créer un compte"
+
+  tasks:
+    todo_list: "Liste à faire"
+    name: "Nom"
+    status: "Statue"
+    new_task: "Nouvelle tâche "

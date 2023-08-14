@@ -13,6 +13,7 @@ gem "sprockets-rails"
 gem "pg", "~>  1.5.3"
 gem "letter_opener", group: :development
 gem "devise"
+gem 'cancancan'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
