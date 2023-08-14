@@ -87,15 +87,15 @@
               </div>
             </div>
             <div class="flex">
-              <%#= link_to "Add new product", new_admin_product_path, class: "w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" %>
+              <%= link_to "Add new product", new_admin_product_path, class: "w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" %>
             </div>
-            <button id="createProductButton"
-                    class="text-white bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
-                    type="button" data-drawer-target="drawer-create-product-default"
-                    data-drawer-show="drawer-create-product-default" aria-controls="drawer-create-product-default"
-                    data-drawer-placement="right">
-              Add new product
-            </button>
+<!--            <button id="createProductButton"-->
+<!--                    class="text-white bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"-->
+<!--                    type="button" data-drawer-target="drawer-create-product-default"-->
+<!--                    data-drawer-show="drawer-create-product-default" aria-controls="drawer-create-product-default"-->
+<!--                    data-drawer-placement="right">-->
+<!--              Add new product-->
+<!--            </button>-->
           </div>
         </div>
       </div>
@@ -178,7 +178,7 @@
                                   d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
                                   clip-rule="evenodd"></path>
                           </svg>
-                          <%= button_to "Delete", product, method: :delete %>
+                          <%= button_to "Delete", admin_product_path(product), method: :delete %>
                         </div>
                       </td>
                     </div>

@@ -15,9 +15,12 @@ class Admin::Devise::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  def destroy
+    signed_out = sign_out(:admin)
+    set_flash_message! :notice, :signed_out if signed_out
+    yield if block_given?
+    respond_to_on_destroy
+  end
 
   # protected
 
