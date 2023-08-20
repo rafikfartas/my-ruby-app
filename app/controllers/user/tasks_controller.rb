@@ -1,5 +1,6 @@
 class User::TasksController < UserController
   before_action :set_task, only: %i[ show edit update destroy ]
+  load_and_authorize_resource
   # layout 'dashboard', only: [:index, :show, :edit, :new]
 
   # GET /tasks or /tasks.json

@@ -8,7 +8,7 @@ class Ability
     # can :read, Product, public: true
 
     return unless user.present?  # additional permissions for logged in users (they can read their own posts)
-    can :read, create, update, delete, Task, user: user
+    can :manage, Task, user: user
 
     # return unless user.admin?  # additional permissions for administrators
     # can :read, Product

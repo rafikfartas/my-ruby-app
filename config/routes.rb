@@ -26,5 +26,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "user/tasks#index"
-  get '/:locale' => 'user/tasks#index'
+  # get '/:locale' => 'user/tasks#index'
 end
