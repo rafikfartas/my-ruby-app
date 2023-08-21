@@ -9,8 +9,6 @@
 
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
-  <!-- <link rel="stylesheet" type="text/css" href="/app/assets/stylesheets/datatables.css"> -->
 </head>
 
 <body>
@@ -26,32 +24,6 @@
 </div>
 
 
-
-<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
-<script src="https://flowbite-admin-dashboard.vercel.app//app.bundle.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/datepicker.min.js"></script>
-
-
-<script src="https://code.jquery.com/jquery-3.7.0.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
-<script type="text/javascript">
-    jQuery('#products-datatable').dataTable({
-        "serverSide": true,
-        "ajax": {
-            "url" : $('#products-datatable').data('source')
-        },
-        "pagingType" : "full_numbers",
-        "columns": [
-            {"data": "id"},
-            {"data": "name"},
-            {"data": "category"},
-            {"data": "description"},
-            {"data": "price"}
-        ]
-
-    });
-</script>
 </body>
-
 
 </html>
