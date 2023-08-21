@@ -401,6 +401,7 @@ __metadata:
     autoprefixer: latest
     esbuild: ^0.18.17
     flowbite: ^1.8.1
+    jquery: ^3.7.0
     postcss: latest
     tailwindcss: ^3.3.3
   languageName: unknown
@@ -1186,6 +1187,13 @@ autoprefixer@latest:
   bin:
     jiti: bin/jiti.js
   checksum: fdf55e315f9e81c04ae902416642062851d92c6cdcc17a59d5d1d35e1a0842e4e79be38da86613c5776fa18c579954542a441b93d1c347a50137dee2e558cbd0
+  languageName: node
+  linkType: hard
+
+"jquery@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "jquery@npm:3.7.0"
+  checksum: 907785e133afc427650a131af5fccef66a404885037513b3d4d7d63aee6409bcc32a39836868c60e59b05aa0fb8ace8961c18b2ee3ffdf6ffdb571d6d7cd88ff
   languageName: node
   linkType: hard
 

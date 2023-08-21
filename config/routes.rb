@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   devise_for :admins, controllers: {
     sessions: 'admin/devise/sessions',
     registrations: 'admin/devise/registrations',
@@ -27,4 +28,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "user/tasks#index"
   # get '/:locale' => 'user/tasks#index'
+
 end

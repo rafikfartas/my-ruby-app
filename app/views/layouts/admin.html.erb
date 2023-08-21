@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Admin</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+  <!-- <link rel="stylesheet" type="text/css" href="/app/assets/stylesheets/datatables.css"> -->
+</head>
+
+<body>
+
+<%= yield %>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+<script type="text/javascript">
+    jQuery('#products-datatable').dataTable({
+        "serverSide": true,
+        "ajax": {
+            "url" : $('#products-datatable').data('source')
+        },
+        "pagingType" : "full_numbers",
+        "columns": [
+            {"data": "id"},
+            {"data": "name"},
+            {"data": "category"},
+            {"data": "description"},
+            {"data": "price"}
+        ]
+
+    });
+</script>
+</body>
+
+
+</html>

@@ -7,6 +7,11 @@ class Admin::ProductsController < AdminController
   def index
     @products = Product.all
     @product = Product.new
+    respond_to do |format|
+      format.html
+      format.json { render json: ProductDatatable.new(params) }
+    end
+
   end
 
   # GET /products/1 or /products/1.json
@@ -21,6 +26,12 @@ class Admin::ProductsController < AdminController
   # GET /products/1/edit
   def edit
   end
+
+  def data
+    # Fetch and format your data
+
+  end
+
 
   # POST /products or /products.json
   def create
