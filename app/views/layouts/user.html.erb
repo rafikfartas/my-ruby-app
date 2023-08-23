@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
 
 </head>
 
 <body>
-<script src="https://flowbite-admin-dashboard.vercel.app//app.bundle.js"></script>
+<%= javascript_include_tag "flowbite-admin-dashboard.vercel.app_app.bundle", "data-turbo-track": "reload" %>
 <%= render partial: 'user/components/navigation' %>
 <%= yield %>
 

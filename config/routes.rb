@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'home/index'
   devise_for :admins, controllers: {
     sessions: 'admin/devise/sessions',
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :products
+    resources :categories
     root to: 'products#index'
   end
 

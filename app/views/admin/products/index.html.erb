@@ -206,18 +206,22 @@
 
 <script>
     jQuery('#products-datatable').dataTable({
-        "serverSide": true,
-        "ajax": $('#products-datatable').data('source'),
-
+        serverSide: true,
+        ajax: $('#products-datatable').data('source'),
         "pagingType": "full_numbers",
-        "columns": [
+        dom: 'Bfrtip',
+        buttons : [
+            'colvis',
+            'excel',
+            'print'
+        ],
+        columns: [
             {data: "id"},
             {data: "name"},
             {data: "category"},
             {data: "description"},
             {data: "price"}
         ]
-
     });
 </script>
 

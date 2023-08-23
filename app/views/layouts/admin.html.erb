@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
 </head>
 
 <body>
+
+<%= javascript_include_tag "flowbite-admin-dashboard.vercel.app_app.bundle", "data-turbo-track": "reload" %>
+
 
 <%= render partial: 'admin/components/navigation' %>
 
