@@ -21,6 +21,7 @@ class Admin::ProductsController < AdminController
   # GET /products/new
   def new
     @product = Product.new
+    @product.categories.build
   end
 
   # GET /products/1/edit
@@ -80,7 +81,7 @@ class Admin::ProductsController < AdminController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:name, :description, :price, :category)
+      params.require(:product).permit(:name, :description, :price, category_products_attributes: [:id, :category_id, :_destroy])
     end
 end
 

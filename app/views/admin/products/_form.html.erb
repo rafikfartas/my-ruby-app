@@ -23,9 +23,12 @@
              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category id</label>
       <%#= form.collection_select :category_id, Category.all, :id, :name, {}, multiple: true, prompt: true, class: "tom-select" %>
 
-      <%= form.fields_for :category do |f| %>
-        <%= f.select :categories, Category.pluck(:name, :id), {}, {} %>
+      <%= form.fields_for :category_products do |f| %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name) %>
+        <%#= f.link_to_remove "Remove this category" %>
       <% end %>
+
+<!--      <p><%#= form.link_to_add "Add a category", :category_products %></p>-->
 
 
 
