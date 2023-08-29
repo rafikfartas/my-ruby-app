@@ -19,7 +19,7 @@
 
     <%= render @product %>
 
-    <div class="flex flex-row justify-between">
+    <div class="flex flex-row justify-between space-x-2">
       <%= link_to "Edit this task", edit_admin_product_path(@product), class: "flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5" %>
       <%= link_to "Back to tasks", admin_products_path, class: "flex text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5" %>
       <%= button_to "Destroy this task", admin_product_path(@product), method: :delete, class: "flex focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5" %>
